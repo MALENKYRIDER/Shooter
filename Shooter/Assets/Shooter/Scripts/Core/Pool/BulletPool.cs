@@ -1,26 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletPool : MonoBehaviour
+public class BulletPool
 {
-    [SerializeField] private GameObject _bulletPrefab;
-    [SerializeField] private Transform _firePoint;
-    [SerializeField] private int _startBulletCount;
-
     private Queue<GameObject> _bullets = new Queue<GameObject>();
 
     private bool _isInitialized;
     private HashSet<GameObject> _activeBullets = new HashSet<GameObject>();
 
-    public void Initialize()
+    public void Initialize(GameObject bulletPrefab, Transform poolRoot, int startBulletCount)
     {
         if (_isInitialized)
             return;
-
-        for (int i = 0; i < _startBulletCount; i++)
+        
+        for (int i = 0; i < startBulletCount; i++)
         {
-            var prefab = Instantiate(_bulletPrefab);
-            prefab.transform.SetParent(_firePoint);
+            var prefab = Object.Instantiate(bulletPrefab);
+            prefab.transform.SetParent(poolRoot);
             prefab.transform.localPosition = Vector3.zero;
             prefab.transform.localRotation = Quaternion.identity;
             _bullets.Enqueue(prefab);

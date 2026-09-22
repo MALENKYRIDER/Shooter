@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class GameBootstrapper : MonoBehaviour
 {
-    [SerializeField] private BulletPool _bulletPool;
-    [SerializeField] private Transform _bulletSpawnPoint;
+    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Transform _poolRoot;
+    [SerializeField] private int _startBulletsCount;
+    
+    private BulletPool _bulletPool;
     
     private void Awake()
     {
-        _bulletPool.Initialize();
-        var bullet = _bulletPool.GetBullet(_bulletSpawnPoint.position, _bulletSpawnPoint.rotation);
-        if (bullet != null)
-            _bulletPool.ReturnBullet(bullet);
+        _bulletPool = new BulletPool();
+        _bulletPool.Initialize(_bulletPrefab, _poolRoot, _startBulletsCount);
     }
 }
