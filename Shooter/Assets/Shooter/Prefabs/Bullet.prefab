@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655683599965900194}
+  - component: {fileID: 4583019642448010875}
   - component: {fileID: 8359396806583001469}
   - component: {fileID: 5731985622010125187}
   - component: {fileID: 3005391867480995448}
@@ -34,6 +35,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4583019642448010875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548316684761333974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c438fc789c06f04383e2187c6a3b494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletView
 --- !u!33 &8359396806583001469
 MeshFilter:
   m_ObjectHideFlags: 0

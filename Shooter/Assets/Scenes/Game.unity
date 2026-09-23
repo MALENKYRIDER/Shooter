@@ -1176,10 +1176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58764cd96a7832949940e9d702f1c4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameBootstrapper
-  _bulletPool: {fileID: 1711979224}
-  _bulletPrefab: {fileID: 0}
-  _firePoint: {fileID: 0}
-  _startBulletsCount: 0
+  _bulletPrefab: {fileID: 5548316684761333974, guid: 342c6c80b77d8ca4e8956c9a0614897f, type: 3}
+  _poolRoot: {fileID: 462043344}
+  _startBulletsCount: 20
 --- !u!1 &1532522548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1288,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711979223}
-  - component: {fileID: 1711979224}
   m_Layer: 0
   m_Name: BulletPool
   m_TagString: Untagged
@@ -1312,18 +1310,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1532522549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1711979224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711979222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ff9b628cfddec479093cd0e02d29e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletPool
 --- !u!1 &1749465393
 GameObject:
   m_ObjectHideFlags: 0
